@@ -27,6 +27,30 @@
   }
 }
 
+.TopBorder{
+  background-color: #000000;
+  width:100vw;
+  height:auto;
+  line-height: 32px;
+}
+
+.Header{
+display: flex;
+flex-direction: column;
+
+}
+.LogoBar{
+  display: flex;
+align-items: space-between;
+justify-content: space-between;
+}
+.HeaderContent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:20px;
+
+}
 .main {
   display: flex;
   flex-direction: column;
