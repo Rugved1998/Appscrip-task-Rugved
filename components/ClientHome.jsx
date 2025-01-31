@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
+
 import styles from "../src/app/page.module.css";
+import ProductList from "./ProductList";
 
 
 export default function ClientHome() {
@@ -10,6 +11,7 @@ export default function ClientHome() {
   const [selectedSort, setSelectedSort] = useState("RECOMMENDED");
   const [isFilterVisible, setIsFilterVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isHeartFilled, setIsHeartFilled] = useState(false);
 
   useEffect(() => {
     async function getProducts() {
@@ -34,23 +36,7 @@ export default function ClientHome() {
   return (
     <div>
       
-      
-      <section
-      className={`${styles.grid} ${isMobile ? styles.gridCols2 : styles.gridCols4}`}
-    >
-      {products.map((product) => (
-  <div key={product.id} >
-    <Image
-      src={product.image}
-      alt={product.title}
-      width={150}
-      height={150}
-      priority
-    />
-    <h5 >{product.title}</h5>
-  </div>
-))}
-    </section>
+     <ProductList products={products} />
         
       </div>
     
