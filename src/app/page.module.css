@@ -295,3 +295,22 @@ background-color: #E5E5E5
     filter: invert();
   }
 } */
+
+
+
+/* Define the common grid styles */
+.grid {
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+}
+
+/* Desktop view (default 4 columns) */
+.gridCols4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Mobile view (2 columns) */
+.gridCols2 {
+  grid-template-columns: repeat(2, 1fr);
+}

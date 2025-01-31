@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Footer from "../../components/Footer";
+import ClientHome from "../../components/ClientHome";
 
 export default function Home() {
   return (
@@ -147,11 +148,7 @@ export default function Home() {
         </div>
        </div>
        <hr/>
-       <div className={styles.mainSection}>
-        Main page
-        <div>Filter section</div>
-        <div>Product List</div>
-       </div>
+       <ClientHome/>
        <hr/>
        <Footer/>
     </main>
