@@ -1,11 +1,9 @@
+"use client";
 // import { useEffect, useState } from 'react';
 import styles from "../src/app/page.module.css";
 
+
 export default function Footer() {
-
-
-  
-
 
 return(
     <footer className={styles.footer}>

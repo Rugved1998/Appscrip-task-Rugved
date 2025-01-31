@@ -1,17 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
-
-import styles from "../src/app/page.module.css";
+import FilterBar from "./FilterBar";
 import ProductList from "./ProductList";
-
+import FilterOptions from "./FilterOptions";
+import styles from "../src/app/page.module.css";
 
 export default function ClientHome() {
   const [products, setProducts] = useState([]);
   const [selectedSort, setSelectedSort] = useState("RECOMMENDED");
   const [isFilterVisible, setIsFilterVisible] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-  const [isHeartFilled, setIsHeartFilled] = useState(false);
 
   useEffect(() => {
     async function getProducts() {
@@ -27,18 +25,31 @@ export default function ClientHome() {
       }
     }
     getProducts();
-    const handleResize = () => setIsMobile(window.innerWidth <= 768);
-    handleResize(); // Initial check
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
     <div>
-      
-     <ProductList products={products} />
-        
+      <FilterBar
+        selectedSort={selectedSort}
+        setSelectedSort={setSelectedSort}
+        isFilterVisible={isFilterVisible}
+        setIsFilterVisible={setIsFilterVisible}
+      />
+      <div className="flex">
+        {isFilterVisible && (
+          <div className="w-1/4 p-4 bg-gray-100">
+            <FilterOptions />
+          </div>
+        )}
+        <div
+          className={`flex-1 transition-all duration-300 ${
+            isFilterVisible ? "ml-4" : ""
+          }`}
+        >
+          <ProductList products={products} />
+        </div>
       </div>
-    
+    </div>
   );
 }
+
