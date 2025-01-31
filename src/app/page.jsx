@@ -136,7 +136,15 @@ export default function Home() {
         </div>
        </div>
        <hr/>
-       <div>Filter and sort options</div>
+       <div className={styles.optionBar}>
+        <div className={styles.filterBar}>
+          <div>3425 items</div>
+          <div className={styles.filter}>Show filter {">"}</div>
+        </div>
+        <div>
+          Recommended {"▼"}
+        </div>
+       </div>
        <hr/>
        <div>
         Main page

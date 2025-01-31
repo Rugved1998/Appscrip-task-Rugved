@@ -224,6 +224,23 @@ font-family: "Simplon Norm", sans-serif;
   text-align: center;
 }
 
+.optionBar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filterBar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.filter{
+  
+  color:#888792;
+  margin: 20px;
+}
 /* @media (prefers-color-scheme: dark) {
   .logo {
     filter: invert();
