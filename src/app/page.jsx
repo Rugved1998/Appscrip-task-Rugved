@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Footer from "../../components/Footer";
 
 export default function Home() {
   return (
@@ -94,7 +95,7 @@ export default function Home() {
    
 
     <main className={styles.main}>
-       <header>
+       <header className={styles.header}>
         <div  className={styles.logobar}>
           <div>
           <Image
@@ -146,16 +147,13 @@ export default function Home() {
         </div>
        </div>
        <hr/>
-       <div>
+       <div className={styles.mainSection}>
         Main page
         <div>Filter section</div>
         <div>Product List</div>
        </div>
        <hr/>
-       <footer>Footer
-        <div>Top</div>
-        <div>Bottom</div>
-       </footer>
+       <Footer/>
     </main>
   );
 }

@@ -103,11 +103,7 @@ a.secondary {
   min-width: 180px;
 }
 
-.footer {
-  grid-row-start: 3;
-  display: flex;
-  gap: 24px;
-}
+
 
 .footer a {
   display: flex;
@@ -172,6 +168,10 @@ a.secondary {
     justify-content: center;
   }
 }
+
+.header{
+  background-color: #E5E5E5
+}
 .logo{
   height: 35.66px;
   width:35.66px;
@@ -214,6 +214,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 font-family: "Simplon Norm", sans-serif;
+background-color: #E5E5E5
 }
 
 .heroTitle{
@@ -228,6 +229,7 @@ font-family: "Simplon Norm", sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #E5E5E5
 }
 
 .filterBar{
@@ -240,6 +242,53 @@ font-family: "Simplon Norm", sans-serif;
   
   color:#888792;
   margin: 20px;
+}
+
+.mainSection{
+  background-color: #E5E5E5
+}
+.footer {
+  /* grid-row-start: 3;
+  display: flex;
+  gap: 24px; */
+  background-color: #000000;
+  color:#ffffff;
+  width: 100%;
+
+}
+.topSection{
+  display:flex;
+  justify-content: space-between;
+
+}
+
+.topLeftSection{
+  display:flex;
+  flex-direction: column;
+}
+
+.subscribeInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.subscribeText
+{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+
+}
+.subscribeInput{
+  display:flex;
+  justify-content: space-between;
+}
+
+.subscribeButton{
+  color:#ffffff;
+  background-color: #000000;
+ border: solid 1px #ffffff;
 }
 /* @media (prefers-color-scheme: dark) {
   .logo {
