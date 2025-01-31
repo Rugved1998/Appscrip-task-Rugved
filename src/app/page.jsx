@@ -93,10 +93,40 @@ export default function Home() {
     // </div>
    
 
-    <main>
+    <main className={styles.main}>
        <header>
-        <h1>Logo</h1>
-        <div>Navbar</div>
+        <div  className={styles.logobar}>
+          <div>
+          <Image
+            className={styles.logo}
+            src="/Images/Logo.png"
+            alt="Shopify logo"
+            width={180}
+            height={38}
+            priority
+            />
+          </div>
+          <div>
+            <h2>LOGO</h2>
+          </div>
+          <div>
+            <Image
+            className={styles.icons}
+            src="/Images/Icons.png"
+            alt="site icons"
+            width={180}
+            height={38}
+            priority
+        />
+          </div>
+        </div>
+        <div className={styles.menu}>
+          <div className={styles.menuItem}>SHOP</div>
+          <div className={styles.menuItem}>SKILLS</div>
+          <div className={styles.menuItem}>STORIES</div>
+          <div className={styles.menuItem}>ABOUT</div>
+          <div className={styles.menuItem}>CONTACT US</div>
+        </div>
        </header>
        <hr/>
        <div>Hero Section</div>
