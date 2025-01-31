@@ -129,13 +129,21 @@ export default function Home() {
         </div>
        </header>
        <hr/>
-       <div>Hero Section</div>
+       <div className={styles.heroSection}>
+        <div className={styles.heroTitle}><h1>Discover our products</h1></div>
+        <div className={styles.heroPara}>
+        Lorem ipsum dolor sit amet consectetur. Amet est posuere rhoncus scelerisque. Dolor integer scelerisque nibh amet mi ut elementum dolor.
+        </div>
+       </div>
+       <hr/>
        <div>Filter and sort options</div>
+       <hr/>
        <div>
         Main page
         <div>Filter section</div>
         <div>Product List</div>
        </div>
+       <hr/>
        <footer>Footer
         <div>Top</div>
         <div>Bottom</div>

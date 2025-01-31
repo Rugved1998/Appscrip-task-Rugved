@@ -16,6 +16,14 @@
   font-family: var(--font-geist-sans);
 }
 
+@font-face {
+  font-family: "Simplon Norm";
+  src: url("/fonts/SimplonNorm-Regular.woff2") format("woff2"),
+       url("/fonts/SimplonNorm-Regular-WebS.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @media (prefers-color-scheme: dark) {
   .page {
     --gray-rgb: 255, 255, 255;
@@ -137,6 +145,7 @@ a.secondary {
 
   .main {
     align-items: center;
+    font-family: "Simplon Norm", sans-serif;
   }
 
   .main ol {
@@ -198,6 +207,21 @@ a.secondary {
 .menuItem:hover{
 opacity:0.5;
 cursor:pointer;
+}
+.heroSection{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+font-family: "Simplon Norm", sans-serif;
+}
+
+.heroTitle{
+  text-transform: capitalize;
+}
+.heroPara{
+  max-width: 400px;
+  text-align: center;
 }
 
 /* @media (prefers-color-scheme: dark) {
